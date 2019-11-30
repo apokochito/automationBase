@@ -13,24 +13,53 @@
         <maven.compiler.target>1.8</maven.compiler.target>
 
         <!-- Required to be overwritten in profiles -->
-        <host.name></host.name>
-        <feaure.source.folder></feaure.source.folder>
+        <host.name/>
+        <feaure.source.folder/>
 
         <!-- Optionally overwritten in profiles -->
-        <requestServerHost></requestServerHost>
-        <accessServerHost></accessServerHost>
-        <consumerKey></consumerKey>
-        <consumerSecret></consumerSecret>
+        <requestServerHost/>
+        <accessServerHost/>
+        <consumerKey/>
+        <consumerSecret/>
 
         <!-- Placeholder for the @RunThis & @Regression Tag annotaion -->
-        <tags></tags>
+        <tags/>
     </properties>
     <dependencies>
 
-        <!-- Authinator-Lib -->
+        <!-- OAuth-Lib -->
         <!-- Basic-Security-Lib -->
         <!-- Utils-lib -->
         <!-- DBConnection-Lib -->
+
+        <!-- Cucumber -->
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+
+        <!-- Mysql Connector -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.18</version>
+        </dependency>
+
+        <!-- Mongo-Driver -->
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>3.11.2</version>
+        </dependency>
+
+        <!-- JsonAssert-Lib -->
+        <dependency>
+            <groupId>org.skyscreamer</groupId>
+            <artifactId>jsonassert</artifactId>
+            <version>1.5.0</version>
+            <scope>test</scope>
+        </dependency>
 
         <dependency>
             <!-- Lombok -->
@@ -73,6 +102,8 @@
                             <projectName>CucumberWebGui</projectName>
                             <outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
                             <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
+                            <skippedFails>true</skippedFails>
+                            <buildNumber>42</buildNumber>
                         </configuration>
                     </execution>
                 </executions>
