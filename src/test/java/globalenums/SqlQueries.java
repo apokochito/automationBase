@@ -10,13 +10,14 @@ public enum SqlQueries {
     getResourceWithNumberValue(""),
     getResourceWithTwoCharacters(""),
     getAllResources("");
-    private String query = ""; // final ?
+
+    private String query = "";
 
     private SqlQueries(String q) {
         this.query = q;
     }
 
-    public String toString(){
+    public String toString() {
         return query;
     }
 

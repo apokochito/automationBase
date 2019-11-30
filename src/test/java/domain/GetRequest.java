@@ -5,5 +5,5 @@ import lombok.Data;
 @Data
 public class GetRequest {
 
-    private String param="";
+    private String structureOfRequest="";
 }

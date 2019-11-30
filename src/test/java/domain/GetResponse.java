@@ -4,5 +4,5 @@ import lombok.Data;
 
 @Data
 public class GetResponse {
-    private String paramResponse="";
+    private String structureOfResponse="";
 }
