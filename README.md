@@ -1,3 +1,3 @@
 # automationBase
 
-This repository is only for references.
+This repository is only for automation references.
